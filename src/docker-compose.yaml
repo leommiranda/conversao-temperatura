@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  conversao-temperatura:
+    image: leommiranda/conversao-temperatura
+    restart: always
+    container_name: conversao-temperatura
+    build: ./
+    command: sh -c "node server.js"
+    ports:
+      - "8080:8080"
